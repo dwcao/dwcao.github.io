@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dns on Green Grass</title>
+    <link>http://home.ustc.edu.cn/~dwcao89/tags/dns/index.xml</link>
+    <description>Recent content in Dns on Green Grass</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>CopyRight&amp;copy; 2016 Dwcao</copyright>
+    <atom:link href="/~dwcao89/tags/dns/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Setup static IP for LAN Ubuntu server</title>
+      <link>http://home.ustc.edu.cn/~dwcao89/2016/10/12/static-ip</link>
+      <pubDate>Wed, 12 Oct 2016 20:15:50 +0800</pubDate>
+      
+      <guid>http://home.ustc.edu.cn/~dwcao89/2016/10/12/static-ip</guid>
+      <description>&lt;p&gt;Ubuntu Server&amp;rsquo;s IP address in local area network (LAN) is changed after restart.
+How fix the IP address ?
+&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://design.ubuntu.com/wp-content/uploads/ubuntu-logo14.png&#34; alt=&#34;Ubuntu&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;step-1-revise-the-network-configuration-file&#34;&gt;Step 1: Revise the network configuration file&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ sudo vi /etc/network/interfaces
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Add those information blow:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;auto eth0
+iface eth0 inet static
+
+address 192.168.1.222
+netmask 255.255.255.0 
+gateway 192.168.1.1
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;step-2-amend-the-dns&#34;&gt;Step 2: Amend the DNS&lt;/h2&gt;
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;p&gt;After set static IP address, it can&amp;rsquo;t analytic domain name (i.e. can&amp;rsquo;t browse external network).
+We should set the DNS first. Edit &lt;code&gt;/etc/resolv.conf&lt;/code&gt; still can&amp;rsquo;t work, because it will be overtritten after every-restart in Ubuntu system.&lt;/p&gt;
+
+&lt;/div&gt;
+
+
+&lt;p&gt;Revising &lt;code&gt;/etc/resolv.conf.d/base&lt;/code&gt; is one way.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ sudo vi /etc/resolv.conf.d/base
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Append DNS information.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;nameserver 8.8.8.8         # Google DNS Server
+nameserver 8.8.4.4
+nameserver 202.127.207.1   # Hefei CAS DNS Server
+# other DNS Server of Telecom operators
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Final restart network configuration. Enjoy &amp;hellip;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ sudo /etc/init.d/networking restart
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;reference&#34;&gt;Reference&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog.ixxoo.me/ubuntu-static-ip-and-dns.html&#34; target=&#34;_blank&#34;&gt;Ubuntu配置静态IP和DNS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.yubosun.com/tech/ubntu-dns-reset.htm&#34; target=&#34;_blank&#34;&gt;Ubuntu下修改DNS重启也能用的方法&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
