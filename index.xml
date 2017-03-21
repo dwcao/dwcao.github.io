@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Green Grass on Green Grass</title>
+    <link>http://dwcao.github.io/index.xml</link>
+    <description>Recent content in Green Grass on Green Grass</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>CopyRight&amp;copy; 2016 Dwcao</copyright>
+    <lastBuildDate>Wed, 20 Apr 2016 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Quick keyboard switch in Logitech K480</title>
+      <link>http://dwcao.github.io/2016/10/14/logitech-480</link>
+      <pubDate>Fri, 14 Oct 2016 15:51:40 +0800</pubDate>
+      
+      <guid>http://dwcao.github.io/2016/10/14/logitech-480</guid>
+      <description>&lt;h3 id=&#34;1-logitech-s-official-introduction&#34;&gt;1. Logitech&amp;rsquo;s Official Introduction&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.logitech.com.cn/zh-cn/product/multi-device-keyboard-k480&#34; target=&#34;_blank&#34;&gt;&lt;big&gt;Bluetooth Multi-Device Keyboard K480&lt;/big&gt;&lt;/a&gt;
+
+&lt;img alt=&#34;k480&#34; src=&#34;https://assets.logitech.com/assets/64499/5/bluetooth-multi-device-keboard-k480.png&#34; width=&#34;500&#34;&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;2-manuals-immersion-guide-http-www-logitech-com-cn-zh-cn-manuals-k480-immersion-guide&#34;&gt;2. &lt;a href=&#34;http://www.logitech.com.cn/zh-cn/manuals/k480-immersion-guide&#34; target=&#34;_blank&#34;&gt;Manuals Immersion Guide&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;img alt=&#34;k480&#34; src=&#34;http://home.ustc.edu.cn/~dwcao89/img/k480/guide.png&#34; width=&#34;500&#34;&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;3-quick-keyboard-switch&#34;&gt;3. Quick Keyboard Switch&lt;/h3&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;i class=&#34;fa fa-android&#34; aria-hidden=&#34;true&#34; style=&#34;font-size:32px;color:limegreen&#34;&gt;&lt;/i&gt;&lt;/th&gt;
+&lt;th&gt;&lt;big&gt;Android&lt;/big&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Shift + Blank&lt;/td&gt;
+&lt;td&gt;Switch between Chinese/English&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Alt + Blank&lt;/td&gt;
+&lt;td&gt;Switch to Symbol&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Shift + Enter&lt;/td&gt;
+&lt;td&gt;Switch ON/OFF English association&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;i class=&#34;fa fa-apple&#34; aria-hidden=&#34;true&#34; style=&#34;font-size:32px;color:black&#34;&gt;&lt;/i&gt;&lt;/th&gt;
+&lt;th&gt;&lt;big&gt;iOS&lt;/big&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Ctrl + Blank&lt;/td&gt;
+&lt;td&gt;Switch between Chinese/English&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&#34;4-avoid-bluetooth-drop-in-win&#34;&gt;4. Avoid Bluetooth drop in Win&lt;/h3&gt;
+
+&lt;p&gt;&lt;img alt=&#34;k480&#34; src=&#34;http://home.ustc.edu.cn/~dwcao89/img/k480/stable.jpg&#34; width=&#34;500&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Setup static IP for LAN Ubuntu server</title>
+      <link>http://dwcao.github.io/2016/10/12/static-ip</link>
+      <pubDate>Wed, 12 Oct 2016 20:15:50 +0800</pubDate>
+      
+      <guid>http://dwcao.github.io/2016/10/12/static-ip</guid>
+      <description>&lt;p&gt;Ubuntu Server&amp;rsquo;s IP address in local area network (LAN) is changed after restart.
+How fix the IP address ?
+&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://design.ubuntu.com/wp-content/uploads/ubuntu-logo14.png&#34; alt=&#34;Ubuntu&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;step-1-revise-the-network-configuration-file&#34;&gt;Step 1: Revise the network configuration file&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ sudo vi /etc/network/interfaces
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Add those information blow:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;auto eth0
+iface eth0 inet static
+
+address 192.168.1.222
+netmask 255.255.255.0 
+gateway 192.168.1.1
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;step-2-amend-the-dns&#34;&gt;Step 2: Amend the DNS&lt;/h2&gt;
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;p&gt;After set static IP address, it can&amp;rsquo;t analytic domain name (i.e. can&amp;rsquo;t browse external network).
+We should set the DNS first. Edit &lt;code&gt;/etc/resolv.conf&lt;/code&gt; still can&amp;rsquo;t work, because it will be overtritten after every-restart in Ubuntu system.&lt;/p&gt;
+
+&lt;/div&gt;
+
+
+&lt;p&gt;Revising &lt;code&gt;/etc/resolv.conf.d/base&lt;/code&gt; is one way.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ sudo vi /etc/resolv.conf.d/base
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Append DNS information.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;nameserver 8.8.8.8         # Google DNS Server
+nameserver 8.8.4.4
+nameserver 202.127.207.1   # Hefei CAS DNS Server
+# other DNS Server of Telecom operators
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Final restart network configuration. Enjoy &amp;hellip;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ sudo /etc/init.d/networking restart
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;reference&#34;&gt;Reference&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog.ixxoo.me/ubuntu-static-ip-and-dns.html&#34; target=&#34;_blank&#34;&gt;Ubuntu配置静态IP和DNS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.yubosun.com/tech/ubntu-dns-reset.htm&#34; target=&#34;_blank&#34;&gt;Ubuntu下修改DNS重启也能用的方法&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
