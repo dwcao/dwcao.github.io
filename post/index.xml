@@ -6,7 +6,7 @@
     <description>Recent content in Posts on Green Grass</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>CopyRight&amp;copy; 2016 Dwcao</copyright>
+    <copyright>CopyRight&amp;copy; 2017 Dwcao</copyright>
     <lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
@@ -89,12 +89,12 @@ How fix the IP address ?
 
 &lt;h2 id=&#34;step-1-revise-the-network-configuration-file&#34;&gt;Step 1: Revise the network configuration file&lt;/h2&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ sudo vi /etc/network/interfaces
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$sudo vi /etc/network/interfaces
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Add those information blow:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;auto eth0
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;auto eth0
 iface eth0 inet static
 
 address 192.168.1.222
@@ -113,12 +113,12 @@ We should set the DNS first. Edit &lt;code&gt;/etc/resolv.conf&lt;/code&gt; stil
 
 &lt;p&gt;Revising &lt;code&gt;/etc/resolv.conf.d/base&lt;/code&gt; is one way.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ sudo vi /etc/resolv.conf.d/base
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$sudo vi /etc/resolv.conf.d/base
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Append DNS information.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;nameserver 8.8.8.8         # Google DNS Server
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;nameserver 8.8.8.8         # Google DNS Server
 nameserver 8.8.4.4
 nameserver 202.127.207.1   # Hefei CAS DNS Server
 # other DNS Server of Telecom operators
@@ -126,7 +126,7 @@ nameserver 202.127.207.1   # Hefei CAS DNS Server
 
 &lt;p&gt;Final restart network configuration. Enjoy &amp;hellip;&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ sudo /etc/init.d/networking restart
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$sudo /etc/init.d/networking restart
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;h3 id=&#34;reference&#34;&gt;Reference&lt;/h3&gt;

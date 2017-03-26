@@ -18,7 +18,7 @@
   
     
     
-    <link rel="stylesheet" href="/css/highlight.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/monokai.min.css">
     
   
   <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -26,8 +26,6 @@
   <link rel="stylesheet" href="/css/academicons.min.css">
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700|Merriweather|Roboto+Mono">
   <link rel="stylesheet" href="/css/hugo-academic.css">
-  
-  <link rel="stylesheet" href="/css/">
   
 
   <link rel="alternate" href="http://dwcao.github.io/index.xml" type="application/rss+xml" title="Green Grass">
@@ -159,41 +157,6 @@
 
   
   
-<div class="share-box" aria-hidden="true">
-  <ul class="share">
-    <li>
-      <a class="facebook"
-         href="https://www.facebook.com/sharer.php?u=http%3a%2f%2fdwcao.github.io%2f2016%2f10%2f12%2fstatic-ip"
-         target="_blank">
-        <i class="fa fa-facebook" style="color:#09568d" aria-hidden="true"></i>
-      </a>
-    </li>
-    <li>
-      <a class="twitter"
-         href="https://twitter.com/intent/tweet?text=Setup%20static%20IP%20for%20LAN%20Ubuntu%20server&amp;url=http%3a%2f%2fdwcao.github.io%2f2016%2f10%2f12%2fstatic-ip"
-         target="_blank">
-        <i class="fa fa-twitter" style="color:#0090c7"></i>
-      </a>
-    </li>
-    <li>
-      <a class="weibo"
-         href="http://service.weibo.com/share/share.php?url=http%3a%2f%2fdwcao.github.io%2f2016%2f10%2f12%2fstatic-ip&amp;title=Setup%20static%20IP%20for%20LAN%20Ubuntu%20server"
-         target="_blank">
-        <i class="fa fa-weibo" style="color:#e62200"></i>
-      </a>
-    </li>
-    <li>
-      <a class="email"
-         href="mailto:?subject=Setup%20static%20IP%20for%20LAN%20Ubuntu%20server&amp;body=http%3a%2f%2fdwcao.github.io%2f2016%2f10%2f12%2fstatic-ip">
-        <i class="fa fa-envelope"></i>
-      </a>
-    </li>
-  </ul>
-</div>
-
-
-
-
 <script type="text/javascript" src="http://v3.jiathis.com/code_mini/jiathis_r.js?type=left&amp;move=0&amp;btn=l2.gif" charset="utf-8"></script>
 
 
@@ -210,12 +173,12 @@ How fix the IP address ?
 
 <h2 id="step-1-revise-the-network-configuration-file">Step 1: Revise the network configuration file</h2>
 
-<pre><code class="language-bash">$ sudo vi /etc/network/interfaces
+<pre><code class="language-bash">$sudo vi /etc/network/interfaces
 </code></pre>
 
 <p>Add those information blow:</p>
 
-<pre><code>auto eth0
+<pre><code class="language-bash">auto eth0
 iface eth0 inet static
 
 address 192.168.1.222
@@ -234,12 +197,12 @@ We should set the DNS first. Edit <code>/etc/resolv.conf</code> still can&rsquo;
 
 <p>Revising <code>/etc/resolv.conf.d/base</code> is one way.</p>
 
-<pre><code class="language-bash">$ sudo vi /etc/resolv.conf.d/base
+<pre><code class="language-bash">$sudo vi /etc/resolv.conf.d/base
 </code></pre>
 
 <p>Append DNS information.</p>
 
-<pre><code>nameserver 8.8.8.8         # Google DNS Server
+<pre><code class="language-bash">nameserver 8.8.8.8         # Google DNS Server
 nameserver 8.8.4.4
 nameserver 202.127.207.1   # Hefei CAS DNS Server
 # other DNS Server of Telecom operators
@@ -247,7 +210,7 @@ nameserver 202.127.207.1   # Hefei CAS DNS Server
 
 <p>Final restart network configuration. Enjoy &hellip;</p>
 
-<pre><code class="language-bash">$ sudo /etc/init.d/networking restart
+<pre><code class="language-bash">$sudo /etc/init.d/networking restart
 </code></pre>
 
 <h3 id="reference">Reference</h3>
@@ -284,7 +247,7 @@ nameserver 202.127.207.1   # Hefei CAS DNS Server
     <div class="container">
         <p class="powered-by">
 
-            CopyRight&copy; 2016 Dwcao &middot; 
+            CopyRight&copy; 2017 Dwcao &middot; 
 
             Powered by <a href="https://github.com/gcushen/hugo-academic" target="_blank">Academic theme</a> for <a href="http://gohugo.io" target="_blank">Hugo</a>. Built on Mar. 16th, 2017
 

@@ -1,4 +1,0 @@
-# Home page
-## Post
-
-## Publications
