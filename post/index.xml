@@ -18,11 +18,11 @@
       <guid>http://dwcao.github.io/2017/03/29/bash-on-ubuntu-on-windows/</guid>
       <description>&lt;p&gt;&lt;/p&gt;
 
-&lt;h1 id=&#34;install&#34;&gt;install&lt;/h1&gt;
+&lt;h2 id=&#34;1-install&#34;&gt;1. install&lt;/h2&gt;
 
 &lt;p&gt;Reference &lt;a href=&#34;https://msdn.microsoft.com/zh-cn/commandline/wsl/install_guide&#34; target=&#34;_blank&#34;&gt;Installation Guide&lt;/a&gt;&lt;/p&gt;
 
-&lt;h1 id=&#34;uninstall&#34;&gt;uninstall&lt;/h1&gt;
+&lt;h2 id=&#34;2-uninstall&#34;&gt;2. uninstall&lt;/h2&gt;
 
 &lt;p&gt;In command prompt:&lt;/p&gt;
 
@@ -40,7 +40,7 @@
       <guid>http://dwcao.github.io/2017/03/28/bash-command/</guid>
       <description>&lt;p&gt;&lt;/p&gt;
 
-&lt;h1 id=&#34;ps1&#34;&gt;PS1&lt;/h1&gt;
+&lt;h2 id=&#34;1-ps1&#34;&gt;1. PS1&lt;/h2&gt;
 
 &lt;p&gt;Change &lt;code&gt;PS1&lt;/code&gt; in &lt;code&gt;.bashrc&lt;/code&gt;, just show the current directory.&lt;/p&gt;
 
