@@ -2,19 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Dns on Green Grass</title>
-    <link>http://dwcao.github.io/tags/dns/index.xml</link>
+    <link>http://dwcao.github.io/tags/dns/</link>
     <description>Recent content in Dns on Green Grass</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>CopyRight&amp;copy; 2017 Dwcao</copyright>
-    <atom:link href="/tags/dns/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 12 Oct 2016 20:15:50 +0800</lastBuildDate>
+    <atom:link href="/tags/dns/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Setup static IP for LAN Ubuntu server</title>
-      <link>http://dwcao.github.io/2016/10/12/static-ip</link>
+      <link>http://dwcao.github.io/2016/10/12/static-ip/</link>
       <pubDate>Wed, 12 Oct 2016 20:15:50 +0800</pubDate>
       
-      <guid>http://dwcao.github.io/2016/10/12/static-ip</guid>
+      <guid>http://dwcao.github.io/2016/10/12/static-ip/</guid>
       <description>&lt;p&gt;Ubuntu Server&amp;rsquo;s IP address in local area network (LAN) is changed after restart.
 How fix the IP address ?
 &lt;/p&gt;

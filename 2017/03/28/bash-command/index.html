@@ -28,17 +28,17 @@
   <link rel="stylesheet" href="/css/hugo-academic.css">
   
 
-  <link rel="alternate" href="http://dwcao.github.io/tags/logitech-k480/index.xml" type="application/rss+xml" title="Green Grass">
-  <link rel="feed" href="http://dwcao.github.io/tags/logitech-k480/index.xml" type="application/rss+xml" title="Green Grass">
+  <link rel="alternate" href="http://dwcao.github.io/index.xml" type="application/rss+xml" title="Green Grass">
+  <link rel="feed" href="http://dwcao.github.io/index.xml" type="application/rss+xml" title="Green Grass">
 
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/apple-touch-icon.png">
 
-  <link rel="canonical" href="http://dwcao.github.io/tags/logitech-k480/">
+  <link rel="canonical" href="http://dwcao.github.io/2017/03/28/bash-command/">
 
   
 
-  <title>Logitech K480 | Green Grass</title>
+  <title>Bash Command | Green Grass</title>
 
    <base target="_self">         
 
@@ -143,30 +143,107 @@
 </nav>
 
 
+<article class="article" itemscope itemtype="http://schema.org/Article">
 
+  
 
-<div class="universal-wrapper">
+  <div class="article-container">
+    <h1 itemprop="name">Bash Command</h1>
+    
 
-  <h1>Logitech K480</h1>
+<div class="article-metadata">
+
+  <span class="article-date">
+    <time datetime="2017-03-28 20:00:23 &#43;0900 KST" itemprop="datePublished">
+      Tue, Mar 28, 2017
+    </time>
+  </span>
 
   
 
   
   
-  <div>
-    <h2><a href="http://dwcao.github.io/2016/10/14/logitech-480/">Quick keyboard switch in Logitech K480</a></h2>
-    <div class="article-style">
-      
-      Bluetooth Multi-Device Keyboard K480
-      
-    </div>
-  </div>
+  
   
 
   
+  
+<script type="text/javascript" src="http://v3.jiathis.com/code_mini/jiathis_r.js?type=left&amp;move=0&amp;btn=l2.gif" charset="utf-8"></script>
 
+
+  
 
 </div>
+
+    <div class="article-style" itemprop="articleBody">
+      <p></p>
+
+<h1 id="ps1">PS1</h1>
+
+<p>Change <code>PS1</code> in <code>.bashrc</code>, just show the current directory.</p>
+
+<pre><code class="language-bash">export PS1=&quot;\u@\h:\W\$'
+</code></pre>
+
+<p>where</p>
+
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>\u</td>
+<td>The name of the logged-in user．</td>
+</tr>
+
+<tr>
+<td>\h</td>
+<td>The hostname up to the first &lsquo;.&rsquo;</td>
+</tr>
+
+<tr>
+<td>\W</td>
+<td>The basename of <code>$PWD</code>, with <code>$HOME</code> abbreviated with a tilde.</td>
+</tr>
+
+<tr>
+<td>\$</td>
+<td>Shows a $ for a regular user or # for root user.</td>
+</tr>
+</tbody>
+</table>
+    </div>
+  </div>
+
+</article>
+
+<div class="container">
+  <nav>
+  <ul class="pager">
+    
+    <li class="previous"><a href="http://dwcao.github.io/2017/03/28/matlab-command/"><span
+      aria-hidden="true">&larr;</span> Matlab Command</a></li>
+    
+
+    
+    <li class="next"><a href="http://dwcao.github.io/2017/03/29/bash-on-ubuntu-on-windows/">Bash on ubuntu on windows <span
+      aria-hidden="true">&rarr;</span></a></li>
+    
+  </ul>
+</nav>
+
+</div>
+
+<div class="article-container">
+  
+
+</div>
+
 <footer class="site-footer">
     <div class="container">
         <p class="powered-by">

@@ -141,15 +141,17 @@ figcaption h4 {
   margin: 0;
 }
 
+
 pre,
 code {
-  font-family: 'Roboto Mono', 'Courier New', 'Courier', monospace;
+  font-family: 'Times New Roman', 'Roboto Mono', 'Courier New', 'Courier', monospace;
 }
 
 pre {
   margin: 0 0 1rem 0;
   overflow: auto;
 }
+
 
 /* Quotes */
 blockquote {

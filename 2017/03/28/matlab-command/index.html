@@ -28,17 +28,17 @@
   <link rel="stylesheet" href="/css/hugo-academic.css">
   
 
-  <link rel="alternate" href="http://dwcao.github.io/tags/logitech-k480/index.xml" type="application/rss+xml" title="Green Grass">
-  <link rel="feed" href="http://dwcao.github.io/tags/logitech-k480/index.xml" type="application/rss+xml" title="Green Grass">
+  <link rel="alternate" href="http://dwcao.github.io/index.xml" type="application/rss+xml" title="Green Grass">
+  <link rel="feed" href="http://dwcao.github.io/index.xml" type="application/rss+xml" title="Green Grass">
 
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/apple-touch-icon.png">
 
-  <link rel="canonical" href="http://dwcao.github.io/tags/logitech-k480/">
+  <link rel="canonical" href="http://dwcao.github.io/2017/03/28/matlab-command/">
 
   
 
-  <title>Logitech K480 | Green Grass</title>
+  <title>Matlab Command | Green Grass</title>
 
    <base target="_self">         
 
@@ -143,30 +143,139 @@
 </nav>
 
 
+<article class="article" itemscope itemtype="http://schema.org/Article">
 
+  
 
-<div class="universal-wrapper">
+  <div class="article-container">
+    <h1 itemprop="name">Matlab Command</h1>
+    
 
-  <h1>Logitech K480</h1>
+<div class="article-metadata">
+
+  <span class="article-date">
+    <time datetime="2017-03-28 14:37:35 &#43;0900 KST" itemprop="datePublished">
+      Tue, Mar 28, 2017
+    </time>
+  </span>
 
   
 
   
   
-  <div>
-    <h2><a href="http://dwcao.github.io/2016/10/14/logitech-480/">Quick keyboard switch in Logitech K480</a></h2>
-    <div class="article-style">
-      
-      Bluetooth Multi-Device Keyboard K480
-      
-    </div>
-  </div>
+  
+  <span class="article-tags">
+    <i class="fa fa-tags"></i>
+    
+    <a href="/tags/matlab">matlab</a
+    >, 
+    
+    <a href="/tags/command">command</a
+    >
+    
+  </span>
+  
   
 
   
+  
+<script type="text/javascript" src="http://v3.jiathis.com/code_mini/jiathis_r.js?type=left&amp;move=0&amp;btn=l2.gif" charset="utf-8"></script>
 
+
+  
 
 </div>
+
+    <div class="article-style" itemprop="articleBody">
+      
+
+<p><img src="http://cn.mathworks.com/etc/designs/mathworks/img/pic-header-mathworks-logo.svg" alt="Matlab logo" /></p>
+
+<h2 id="1-dlmwrite">1. dlmwrite</h2>
+
+<p>Write matrix to ASCII-delimited filea.
+Example:</p>
+
+<pre><code>dlmwrite('myFile.txt',output_var,'precision','%.2f','delimiter','\t');
+</code></pre>
+
+<h2 id="2-find">2. find</h2>
+
+<p>Find indices and values of nonzero elements.
+Example:</p>
+
+<pre><code>index_postion = find(var&gt;10, 1, 'first');
+</code></pre>
+
+<h2 id="3-atan2-angle">3. atan2, angle</h2>
+
+<p>For complex $z$, the magnitude $R$ and phase angle $\theta$ are given by
+\begin{align}
+         R &amp;= \mathrm{abs}(z)  \nonumber      \newline
+    \theta &amp;= \mathrm{angle}(z)      \newline
+\end{align}
+and the statement
+\begin{equation}
+         z = R \cdot \mathrm{exp}(i \cdot \theta)
+\end{equation}
+converts back to the original complex $z$.</p>
+
+<p>The angle function can be expressed as
+\begin{equation}
+    \mathrm{angle}(z)
+    = \mathrm{imag} \Big( \mathrm{log}(z) \Big)
+    = \mathrm{atan2} \Big( \mathrm{imag}(z), \mathrm{real}(z) \Big).
+\end{equation}
+Example:</p>
+
+<pre><code>    z = 4 + 3i;
+    r = abs(z)
+    theta = atan2(imag(z), real(z))
+    theta = angle(z)
+    z = r*exp(1i*theta)
+</code></pre>
+
+<p>Output</p>
+
+<pre><code>    r = 5
+    theta = 0.6435
+    theta = 0.6435
+    z = 4.0000 + 3.0000 i
+</code></pre>
+
+<h2 id="references">References</h2>
+
+<ol>
+<li><a href="https://www.mathworks.com/help/matlab/" target="_blank">Matlab document home</a></li>
+</ol>
+
+    </div>
+  </div>
+
+</article>
+
+<div class="container">
+  <nav>
+  <ul class="pager">
+    
+    <li class="previous"><a href="http://dwcao.github.io/2016/10/14/logitech-480/"><span
+      aria-hidden="true">&larr;</span> Quick keyboard switch in Logitech K480</a></li>
+    
+
+    
+    <li class="next"><a href="http://dwcao.github.io/2017/03/28/bash-command/">Bash Command <span
+      aria-hidden="true">&rarr;</span></a></li>
+    
+  </ul>
+</nav>
+
+</div>
+
+<div class="article-container">
+  
+
+</div>
+
 <footer class="site-footer">
     <div class="container">
         <p class="powered-by">
