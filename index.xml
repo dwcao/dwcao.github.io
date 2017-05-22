@@ -11,6 +11,44 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Convert PDF to PS by pdftops/pdf2ps</title>
+      <link>http://dwcao.github.io/2017/05/22/convert-pdf-to-ps-by-pdftops/pdf2ps/</link>
+      <pubDate>Mon, 22 May 2017 20:35:28 +0900</pubDate>
+      
+      <guid>http://dwcao.github.io/2017/05/22/convert-pdf-to-ps-by-pdftops/pdf2ps/</guid>
+      <description>&lt;p&gt;
+When use Vector graphics in &lt;em&gt;tex&lt;/em&gt; file, we  can use &lt;em&gt;eps&lt;/em&gt; or &lt;em&gt;ps&lt;/em&gt; files.
+How convert &lt;strong&gt;PDF&lt;/strong&gt; files to &lt;strong&gt;EPS/PS&lt;/strong&gt; files:&lt;/p&gt;
+
+&lt;p&gt;By using &lt;strong&gt;pdftops&lt;/strong&gt; or &lt;strong&gt;pdf2ps&lt;/strong&gt;,
+we can convert &lt;em&gt;figure.pdf&lt;/em&gt; &amp;ndash;&amp;gt; &lt;em&gt;figure.eps&lt;/em&gt; or &lt;em&gt;figure.ps&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;pdftops&lt;/strong&gt; can run fast than &lt;strong&gt;pdf2ps&lt;/strong&gt;.
+And &lt;strong&gt;pdftops&lt;/strong&gt; get more smaller output (i.e., eps/ps) file than &lt;strong&gt;pdf2ps&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Use &lt;strong&gt;pdftops&lt;/strong&gt;,&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;pdftops figure.pdf figure.eps
+pdftops figure.pdf figure.ps
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Use &lt;strong&gt;pdf2ps&lt;/strong&gt;,&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;pdf2ps -eps figure.pdf figure.eps
+pdf2ps figure.pdf figure.eps
+pdf2ps figure.pdf figure.ps
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;references&#34;&gt;References&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;http://linuxcommand.org/man_pages/pdftops1.html&#34; target=&#34;_blank&#34;&gt;pdftops - Portable Document Format (PDF) to PostScript converter (ver- sion 3.01)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.oracle.com/cd/E56344_01/html/E54075/pdf2ps-1.html&#34; target=&#34;_blank&#34;&gt;pdf2ps - Ghostscript PDF to PostScript translator&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://unix.stackexchange.com/questions/267317/conversion-of-pdf-to-ps&#34; target=&#34;_blank&#34;&gt;Conversion of PDF to PS (Unix &amp;amp; Linux Stack Exchange)&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</description>
+    </item>
+    
+    <item>
       <title>Bash on ubuntu on windows</title>
       <link>http://dwcao.github.io/2017/03/29/bash-on-ubuntu-on-windows/</link>
       <pubDate>Wed, 29 Mar 2017 10:00:18 +0900</pubDate>
@@ -218,10 +256,10 @@ Example:&lt;/p&gt;
     
     <item>
       <title>Setup static IP for LAN Ubuntu server</title>
-      <link>http://dwcao.github.io/2016/10/12/static-ip/</link>
+      <link>http://dwcao.github.io/2016/10/12/setup-static-ip-for-lan-ubuntu-server/</link>
       <pubDate>Wed, 12 Oct 2016 20:15:50 +0800</pubDate>
       
-      <guid>http://dwcao.github.io/2016/10/12/static-ip/</guid>
+      <guid>http://dwcao.github.io/2016/10/12/setup-static-ip-for-lan-ubuntu-server/</guid>
       <description>&lt;p&gt;Ubuntu Server&amp;rsquo;s IP address in local area network (LAN) is changed after restart.
 How fix the IP address ?
 &lt;/p&gt;
