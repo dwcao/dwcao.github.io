@@ -12,10 +12,10 @@
     
     <item>
       <title>Setup static IP for LAN Ubuntu server</title>
-      <link>http://dwcao.github.io/2016/10/12/static-ip/</link>
+      <link>http://dwcao.github.io/2016/10/12/setup-static-ip-for-lan-ubuntu-server/</link>
       <pubDate>Wed, 12 Oct 2016 20:15:50 +0800</pubDate>
       
-      <guid>http://dwcao.github.io/2016/10/12/static-ip/</guid>
+      <guid>http://dwcao.github.io/2016/10/12/setup-static-ip-for-lan-ubuntu-server/</guid>
       <description>&lt;p&gt;Ubuntu Server&amp;rsquo;s IP address in local area network (LAN) is changed after restart.
 How fix the IP address ?
 &lt;/p&gt;
