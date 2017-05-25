@@ -21,7 +21,7 @@
 }
 
 html {
-  font-family: 'Consolas', 'Times New Roman','Courier new',  'Merriweather', serif;
+  font-family:'Times New Roman', serif, 'Merriweather', 'Courier new', 'Consolas';
   font-size: 16px;
   color: rgba(0,0,0,0.8);
   line-height: 1.65;

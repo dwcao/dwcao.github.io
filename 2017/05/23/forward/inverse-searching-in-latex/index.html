@@ -16,6 +16,11 @@
     
   
   
+    
+    
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/atom-one-dark.min.css">
+    
+  
   <link rel="stylesheet" href="/css/bootstrap.min.css">
   <link rel="stylesheet" href="/css/font-awesome.min.css">
   <link rel="stylesheet" href="/css/academicons.min.css">
@@ -23,17 +28,17 @@
   <link rel="stylesheet" href="/css/hugo-academic.css">
   
 
-  <link rel="alternate" href="http://dwcao.github.io/post/index.xml" type="application/rss+xml" title="Green Grass">
-  <link rel="feed" href="http://dwcao.github.io/post/index.xml" type="application/rss+xml" title="Green Grass">
+  <link rel="alternate" href="http://dwcao.github.io/index.xml" type="application/rss+xml" title="Green Grass">
+  <link rel="feed" href="http://dwcao.github.io/index.xml" type="application/rss+xml" title="Green Grass">
 
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/apple-touch-icon.png">
 
-  <link rel="canonical" href="http://dwcao.github.io/post/">
+  <link rel="canonical" href="http://dwcao.github.io/2017/05/23/forward/inverse-searching-in-latex/">
 
   
 
-  <title>Posts | Green Grass</title>
+  <title>Forward/Inverse searching in Latex | Green Grass</title>
 
    <base target="_self">         
 
@@ -138,51 +143,12 @@
 </nav>
 
 
-
-
-<div class="universal-wrapper">
-
-  <h1>Posts</h1>
+<article class="article" itemscope itemtype="http://schema.org/Article">
 
   
 
-  
-  
-  <div>
-    
-    <h2><a href="http://dwcao.github.io/2017/05/25/vim-command/">vim command</a></h2>
-    
-
-<div class="article-metadata">
-
-  <span class="article-date">
-    <time datetime="2017-05-25 17:44:48 &#43;0900 KST" itemprop="datePublished">
-      Thu, May 25, 2017
-    </time>
-  </span>
-
-  
-
-  
-  
-  
-  
-
-  
-
-</div>
-
-    <div class="article-style"><p>
-      
-      <img src="http://img3.wikia.nocookie.net/__cb4/vim/images/8/89/Wiki-wordmark.png" alt="VIM" />
-
-      
-    </p></div>
-  </div>
-  
-  <div>
-    
-    <h2><a href="http://dwcao.github.io/2017/05/23/forward/inverse-searching-in-latex/">Forward/Inverse searching in Latex</a></h2>
+  <div class="article-container">
+    <h1 itemprop="name">Forward/Inverse searching in Latex</h1>
     
 
 <div class="article-metadata">
@@ -201,250 +167,121 @@
   
 
   
+  
+<script type="text/javascript" src="http://v3.jiathis.com/code_mini/jiathis_r.js?type=left&amp;move=0&amp;btn=l2.gif" charset="utf-8"></script>
+
+
+  
 
 </div>
 
-    <div class="article-style"><p>
-      
-      <img src="https://www.latex-project.org/img/latex-project-logo.svg" alt="latex-project" /></p>
+    <div class="article-style" itemprop="articleBody">
+      <p><img src="https://www.latex-project.org/img/latex-project-logo.svg" alt="latex-project" /></p>
 
 <p>We can use  <strong>SyncTeX</strong> to achieve Forward &amp; Inverse searching
 between PDF and Tex files.
+</p>
 
-      
-    </p></div>
+<p>Set</p>
+
+<pre><code>pdflatex = &quot;pdflatex --synctex=-1 %O %S&quot;;
+</code></pre>
+
+<p>Or compile tex file by using</p>
+
+<pre><code>pdflatex --syntex=-1 file.tex
+</code></pre>
+
+<div class="alert alert-warning">
+  <p><strong>--syntex=-1</strong> works well for both <a href="https://github.com/vim/vim" target="_blank">Gvim</a> and <a href="https://github.com/sumatrapdfreader/sumatrapdf" target="_blank">WinEdt</a>.</p>
+
+<p><strong>-syntec=1</strong> just works for WindEdt.</p>
+
+</div>
+
+
+<h2 id="1-swift-between-gvim-and-sumatrapdf">1. swift between Gvim and SumatraPDF</h2>
+
+<p>Here use vim/gvim to edit tex files and SumatraPDF for PDF files</p>
+
+<h3 id="forward-research-tex-pdf">Forward research: tex -&gt; pdf</h3>
+
+<p>In vim&rsquo;s command mode, type <span style="color:red"> <strong><a href="http://vim-latex.sourceforge.net/documentation/latex-suite-quickstart.html#lsq-quick-inverse-searching" target="_blank">\ls</a></strong> </span>.
+Note: Need vim plugin <strong><a href="https://github.com/vim-latex/vim-latex" target="_blank">latex-suite</a></strong>.</p>
+
+<h3 id="inverse-research-pdf-tex">Inverse research: pdf -&gt; tex</h3>
+
+<p>Just double-left click.
+Note: configure setting:</p>
+
+<pre><code>&quot;C:\Program Files (x86)\Vim\vim80\gvim.exe&quot; --remote-silent +&quot;%l|exe 'normal! zv'&quot; %f
+</code></pre>
+
+<p>Or</p>
+
+<pre><code>&quot;C:\Program Files (x86)\Vim\vim80\gvim.exe&quot; --servername GVIM --remote-silent +%l %f
+</code></pre>
+
+<p>If you have add gvim path into <strong><a href="https://superuser.com/questions/949560/how-do-i-set-system-environment-variables-in-windows-10" target="_blank">$PATH</a></strong>, just set it as</p>
+
+<pre><code>gvim --remote-silent +&quot;%l|exe 'normal! zv'&quot; %f
+</code></pre>
+
+<p><img src="/img/SumatraPDF-setting.png" alt="configure setting in SumatraPDF" /></p>
+
+<h2 id="2-swift-between-winedt-http-www-winedt-com-and-sumatrapdf">2. swift between <a href="http://www.winedt.com/" target="_blank">WinEdt</a> and SumatraPDF</h2>
+
+<h3 id="forward-research-tex-pdf-1">Forward research: tex -&gt; pdf</h3>
+
+<p>Use shortcut key: <strong>Shift + F8</strong>, or click <i class="fa fa-search-plus fa-1x"></i> <img src="/img/WinEdt-Inverse.png" alt="shortcut key" />
+<img src="/img/WinEdt-synctex.png" alt="SyncTeX setting" /></p>
+
+<h3 id="inverse-research-pdf-tex-1">Inverse research: pdf -&gt; tex</h3>
+
+<p>Just double-left click.
+Note: configure setting:</p>
+
+<pre><code>&quot;C:\Program Files\WinEdt Team\WinEdt 10\WinEdt.exe&quot; -C=&quot;WinEdt 10.2&quot; &quot;[Open(|%f|);SelPar(%l,8);]&quot;
+</code></pre>
+
+<p><img src="/img/SumatraPDF-setting2.png" alt="configure setting in SumatraPDF" /></p>
+
+<h2 id="reference">Reference</h2>
+
+<ol>
+<li><a href="https://stackoverflow.com/questions/18731416/vim-open-fold-with-remote-silent" target="_blank">vim: open fold with remote-silent</a></li>
+<li><a href="https://tex.stackexchange.com/questions/354555/vim-latex-forward-and-reverse-search" target="_blank">Vim-latex: forward and reverse search</a></li>
+<li><a href="https://www.sumatrapdfreader.org/docs/Use-Sumatra-as-a-pre-viewer-for-LaTeX-editors-06174d1d7be24e10966656261c70ed7f.html" target="_blank">Use Sumatra as a pre-viewer for LaTeX editors</a></li>
+<li><a href="http://mg.readthedocs.io/latexmk.html" target="_blank">Using Latexmk</a></li>
+<li><a href="http://vim-latex.sourceforge.net/documentation/latex-suite/inverse-searching.html" target="_blank">Inverse Searching (documentation/latex-suite)</a></li>
+</ol>
+    </div>
   </div>
-  
-  <div>
+
+</article>
+
+<div class="container">
+  <nav>
+  <ul class="pager">
     
-    <h2><a href="http://dwcao.github.io/2017/05/22/convert-pdf-to-ps-by-pdftops/pdf2ps/">Convert PDF to PS by pdftops/pdf2ps</a></h2>
+    <li class="previous"><a href="http://dwcao.github.io/2017/05/22/convert-pdf-to-ps-by-pdftops/pdf2ps/"><span
+      aria-hidden="true">&larr;</span> Convert PDF to PS by pdftops/pdf2ps</a></li>
     
 
-<div class="article-metadata">
+    
+    <li class="next"><a href="http://dwcao.github.io/2017/05/25/vim-command/">vim command <span
+      aria-hidden="true">&rarr;</span></a></li>
+    
+  </ul>
+</nav>
 
-  <span class="article-date">
-    <time datetime="2017-05-22 20:35:28 &#43;0900 KST" itemprop="datePublished">
-      Mon, May 22, 2017
-    </time>
-  </span>
+</div>
 
-  
-
-  
-  
-  
-  
-
+<div class="article-container">
   
 
 </div>
 
-    <div class="article-style"><p>
-      
-      Use <strong>pdftops</strong> or <strong>pdf2ps</strong>,
-we can convert <em>figure.pdf</em> &ndash;&gt; <em>figure.eps</em> or <em>figure.ps</em></p>
-
-<p>
-      
-    </p></div>
-  </div>
-  
-  <div>
-    
-    <h2><a href="http://dwcao.github.io/2017/03/29/bash-on-ubuntu-on-windows/">Bash on ubuntu on windows</a></h2>
-    
-
-<div class="article-metadata">
-
-  <span class="article-date">
-    <time datetime="2017-03-29 10:00:18 &#43;0900 KST" itemprop="datePublished">
-      Wed, Mar 29, 2017
-    </time>
-  </span>
-
-  
-
-  
-  
-  
-  
-
-  
-
-</div>
-
-    <div class="article-style"><p>
-      
-      
-      
-    </p></div>
-  </div>
-  
-  <div>
-    
-    <h2><a href="http://dwcao.github.io/2017/03/28/bash-command/">Bash Command</a></h2>
-    
-
-<div class="article-metadata">
-
-  <span class="article-date">
-    <time datetime="2017-03-28 20:00:23 &#43;0900 KST" itemprop="datePublished">
-      Tue, Mar 28, 2017
-    </time>
-  </span>
-
-  
-
-  
-  
-  
-  
-
-  
-
-</div>
-
-    <div class="article-style"><p>
-      
-      
-      
-    </p></div>
-  </div>
-  
-  <div>
-    
-    <h2><a href="http://dwcao.github.io/2017/03/28/matlab-command/">Matlab Command</a></h2>
-    
-
-<div class="article-metadata">
-
-  <span class="article-date">
-    <time datetime="2017-03-28 14:37:35 &#43;0900 KST" itemprop="datePublished">
-      Tue, Mar 28, 2017
-    </time>
-  </span>
-
-  
-
-  
-  
-  
-  <span class="article-tags">
-    <i class="fa fa-tags"></i>
-    
-    <a href="/tags/matlab">matlab</a
-    >, 
-    
-    <a href="/tags/command">command</a
-    >
-    
-  </span>
-  
-  
-
-  
-
-</div>
-
-    <div class="article-style"><p>
-      
-      <img src="http://cn.mathworks.com/etc/designs/mathworks/img/pic-header-mathworks-logo.svg" alt="Matlab logo" />
-
-      
-    </p></div>
-  </div>
-  
-  <div>
-    
-    <h2><a href="http://dwcao.github.io/2016/10/14/logitech-480/">Quick keyboard switch in Logitech K480</a></h2>
-    
-
-<div class="article-metadata">
-
-  <span class="article-date">
-    <time datetime="2016-10-14 15:51:40 &#43;0800 &#43;0800" itemprop="datePublished">
-      Fri, Oct 14, 2016
-    </time>
-  </span>
-
-  
-
-  
-  
-  
-  <span class="article-tags">
-    <i class="fa fa-tags"></i>
-    
-    <a href="/tags/logitech-k480">logitech k480</a
-    >, 
-    
-    <a href="/tags/keyboard-switch">keyboard switch</a
-    >
-    
-  </span>
-  
-  
-
-  
-
-</div>
-
-    <div class="article-style"><p>
-      
-      Bluetooth Multi-Device Keyboard K480
-      
-    </p></div>
-  </div>
-  
-  <div>
-    
-    <h2><a href="http://dwcao.github.io/2016/10/12/setup-static-ip-for-lan-ubuntu-server/">Setup static IP for LAN Ubuntu server</a></h2>
-    
-
-<div class="article-metadata">
-
-  <span class="article-date">
-    <time datetime="2016-10-12 20:15:50 &#43;0800 &#43;0800" itemprop="datePublished">
-      Wed, Oct 12, 2016
-    </time>
-  </span>
-
-  
-
-  
-  
-  
-  <span class="article-tags">
-    <i class="fa fa-tags"></i>
-    
-    <a href="/tags/static-ip">static ip</a
-    >, 
-    
-    <a href="/tags/dns">DNS</a
-    >
-    
-  </span>
-  
-  
-
-  
-
-</div>
-
-    <div class="article-style"><p>
-      
-      Ubuntu Server&rsquo;s IP address in local area network (LAN) is changed after restart.
-How fix the IP address ?
-
-      
-    </p></div>
-  </div>
-  
-
-  
-
-
-</div>
 <footer class="site-footer">
     <div class="container">
         <p class="powered-by">
@@ -497,6 +334,15 @@ How fix the IP address ?
     
 
     
+    
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+
+      
+
+      
+
+      <script>hljs.initHighlightingOnLoad();</script>
     
 
     

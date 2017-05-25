@@ -176,15 +176,20 @@
 </div>
 
     <div class="article-style" itemprop="articleBody">
-      <p>
-When use Vector graphics in <em>tex</em> file, we  can use <em>eps</em> or <em>ps</em> files.
-How convert <strong>PDF</strong> files to <strong>EPS/PS</strong> files:</p>
-
-<p>By using <strong>pdftops</strong> or <strong>pdf2ps</strong>,
+      <p>Use <strong>pdftops</strong> or <strong>pdf2ps</strong>,
 we can convert <em>figure.pdf</em> &ndash;&gt; <em>figure.eps</em> or <em>figure.ps</em></p>
 
-<p><strong>pdftops</strong> can run fast than <strong>pdf2ps</strong>.
-And <strong>pdftops</strong> get more smaller output (i.e., eps/ps) file than <strong>pdf2ps</strong>.</p>
+<p></p>
+
+<div class="alert alert-note">
+  <p><strong>pdftops</strong> can run fast than <strong>pdf2ps</strong>.
+And <strong>pdftops</strong> get more smaller output (i.e., eps/ps) file than <strong>pdf2ps</strong>.
+But <strong>pdftops</strong> get lossy quality figure, sometimes the output is not good enough.</p>
+
+<p>Therefore, I recommend to use pdf-figure directly.</p>
+
+</div>
+
 
 <p>Use <strong>pdftops</strong>,</p>
 
@@ -199,12 +204,20 @@ pdf2ps figure.pdf figure.eps
 pdf2ps figure.pdf figure.ps
 </code></pre>
 
-<h3 id="references">References</h3>
+<h2 id="tips">Tips:</h2>
+
+<p>Convert PDF to eps (remove white space)</p>
+
+<pre><code>ps2pdf14  -dEPSCrop image.eps image.pdf
+</code></pre>
+
+<h2 id="references">References</h2>
 
 <ol>
 <li><a href="http://linuxcommand.org/man_pages/pdftops1.html" target="_blank">pdftops - Portable Document Format (PDF) to PostScript converter (ver- sion 3.01)</a></li>
 <li><a href="https://docs.oracle.com/cd/E56344_01/html/E54075/pdf2ps-1.html" target="_blank">pdf2ps - Ghostscript PDF to PostScript translator</a></li>
 <li><a href="https://unix.stackexchange.com/questions/267317/conversion-of-pdf-to-ps" target="_blank">Conversion of PDF to PS (Unix &amp; Linux Stack Exchange)</a></li>
+<li><a href="http://loulloudes.info/blog/?p=28" target="_blank">Removing white space when converting from EPS to PDF</a></li>
 </ol>
     </div>
   </div>
@@ -219,6 +232,9 @@ pdf2ps figure.pdf figure.ps
       aria-hidden="true">&larr;</span> Bash on ubuntu on windows</a></li>
     
 
+    
+    <li class="next"><a href="http://dwcao.github.io/2017/05/23/forward/inverse-searching-in-latex/">Forward/Inverse searching in Latex <span
+      aria-hidden="true">&rarr;</span></a></li>
     
   </ul>
 </nav>

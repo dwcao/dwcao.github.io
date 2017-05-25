@@ -64,7 +64,7 @@ nameserver 202.127.207.1   # Hefei CAS DNS Server
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$sudo /etc/init.d/networking restart
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;reference&#34;&gt;Reference&lt;/h3&gt;
+&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
 
 &lt;ol&gt;
 &lt;li&gt;&lt;a href=&#34;https://blog.ixxoo.me/ubuntu-static-ip-and-dns.html&#34; target=&#34;_blank&#34;&gt;Ubuntu配置静态IP和DNS&lt;/a&gt;&lt;/li&gt;

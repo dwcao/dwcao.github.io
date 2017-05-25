@@ -11,20 +11,201 @@
     <atom:link href="/post/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>vim command</title>
+      <link>http://dwcao.github.io/2017/05/25/vim-command/</link>
+      <pubDate>Thu, 25 May 2017 17:44:48 +0900</pubDate>
+      
+      <guid>http://dwcao.github.io/2017/05/25/vim-command/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://img3.wikia.nocookie.net/__cb4/vim/images/8/89/Wiki-wordmark.png&#34; alt=&#34;VIM&#34; /&gt;
+&lt;/p&gt;
+
+&lt;h2 id=&#34;move-around-fast&#34;&gt;move around fast&lt;/h2&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Command&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;H&lt;/td&gt;
+&lt;td&gt;move to top of screen&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;M&lt;/td&gt;
+&lt;td&gt;move to middle of screen&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;L&lt;/td&gt;
+&lt;td&gt;move to bottom of screen&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Ctrl-D&lt;/td&gt;
+&lt;td&gt;move half-page down&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Ctrl-U&lt;/td&gt;
+&lt;td&gt;move half-page up&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Ctrl-B&lt;/td&gt;
+&lt;td&gt;move page up&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Ctrl-F&lt;/td&gt;
+&lt;td&gt;move page down&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Ctrl-O&lt;/td&gt;
+&lt;td&gt;jump to last (older) cursor position&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Ctrl-I&lt;/td&gt;
+&lt;td&gt;jump to next cursor position (after Ctrl-O)&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;zz/z.&lt;/td&gt;
+&lt;td&gt;scroll the line with the cursor to the center of the screen&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;zt&lt;/td&gt;
+&lt;td&gt;scroll the line with the cursor to the top of the screen&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;zb&lt;/td&gt;
+&lt;td&gt;scroll the line with the cursor to the bottom of the screen&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;http://vim.wikia.com/wiki/All_the_right_moves&#34; target=&#34;_blank&#34;&gt;All the right moves&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</description>
+    </item>
+    
+    <item>
+      <title>Forward/Inverse searching in Latex</title>
+      <link>http://dwcao.github.io/2017/05/23/forward/inverse-searching-in-latex/</link>
+      <pubDate>Tue, 23 May 2017 17:02:01 +0900</pubDate>
+      
+      <guid>http://dwcao.github.io/2017/05/23/forward/inverse-searching-in-latex/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://www.latex-project.org/img/latex-project-logo.svg&#34; alt=&#34;latex-project&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We can use  &lt;strong&gt;SyncTeX&lt;/strong&gt; to achieve Forward &amp;amp; Inverse searching
+between PDF and Tex files.
+&lt;/p&gt;
+
+&lt;p&gt;Set&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;pdflatex = &amp;quot;pdflatex --synctex=-1 %O %S&amp;quot;;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Or compile tex file by using&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;pdflatex --syntex=-1 file.tex
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;div class=&#34;alert alert-warning&#34;&gt;
+  &lt;p&gt;&lt;strong&gt;--syntex=-1&lt;/strong&gt; works well for both &lt;a href=&#34;https://github.com/vim/vim&#34; target=&#34;_blank&#34;&gt;Gvim&lt;/a&gt; and &lt;a href=&#34;https://github.com/sumatrapdfreader/sumatrapdf&#34; target=&#34;_blank&#34;&gt;WinEdt&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;-syntec=1&lt;/strong&gt; just works for WindEdt.&lt;/p&gt;
+
+&lt;/div&gt;
+
+
+&lt;h2 id=&#34;1-swift-between-gvim-and-sumatrapdf&#34;&gt;1. swift between Gvim and SumatraPDF&lt;/h2&gt;
+
+&lt;p&gt;Here use vim/gvim to edit tex files and SumatraPDF for PDF files&lt;/p&gt;
+
+&lt;h3 id=&#34;forward-research-tex-pdf&#34;&gt;Forward research: tex -&amp;gt; pdf&lt;/h3&gt;
+
+&lt;p&gt;In vim&amp;rsquo;s command mode, type &lt;span style=&#34;color:red&#34;&gt; &lt;strong&gt;&lt;a href=&#34;http://vim-latex.sourceforge.net/documentation/latex-suite-quickstart.html#lsq-quick-inverse-searching&#34; target=&#34;_blank&#34;&gt;\ls&lt;/a&gt;&lt;/strong&gt; &lt;/span&gt;.
+Note: Need vim plugin &lt;strong&gt;&lt;a href=&#34;https://github.com/vim-latex/vim-latex&#34; target=&#34;_blank&#34;&gt;latex-suite&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;inverse-research-pdf-tex&#34;&gt;Inverse research: pdf -&amp;gt; tex&lt;/h3&gt;
+
+&lt;p&gt;Just double-left click.
+Note: configure setting:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;quot;C:\Program Files (x86)\Vim\vim80\gvim.exe&amp;quot; --remote-silent +&amp;quot;%l|exe &#39;normal! zv&#39;&amp;quot; %f
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Or&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;quot;C:\Program Files (x86)\Vim\vim80\gvim.exe&amp;quot; --servername GVIM --remote-silent +%l %f
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If you have add gvim path into &lt;strong&gt;&lt;a href=&#34;https://superuser.com/questions/949560/how-do-i-set-system-environment-variables-in-windows-10&#34; target=&#34;_blank&#34;&gt;$PATH&lt;/a&gt;&lt;/strong&gt;, just set it as&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;gvim --remote-silent +&amp;quot;%l|exe &#39;normal! zv&#39;&amp;quot; %f
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://dwcao.github.io/img/SumatraPDF-setting.png&#34; alt=&#34;configure setting in SumatraPDF&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;2-swift-between-winedt-http-www-winedt-com-and-sumatrapdf&#34;&gt;2. swift between &lt;a href=&#34;http://www.winedt.com/&#34; target=&#34;_blank&#34;&gt;WinEdt&lt;/a&gt; and SumatraPDF&lt;/h2&gt;
+
+&lt;h3 id=&#34;forward-research-tex-pdf-1&#34;&gt;Forward research: tex -&amp;gt; pdf&lt;/h3&gt;
+
+&lt;p&gt;Use shortcut key: &lt;strong&gt;Shift + F8&lt;/strong&gt;, or click &lt;i class=&#34;fa fa-search-plus fa-1x&#34;&gt;&lt;/i&gt; &lt;img src=&#34;http://dwcao.github.io/img/WinEdt-Inverse.png&#34; alt=&#34;shortcut key&#34; /&gt;
+&lt;img src=&#34;http://dwcao.github.io/img/WinEdt-synctex.png&#34; alt=&#34;SyncTeX setting&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;inverse-research-pdf-tex-1&#34;&gt;Inverse research: pdf -&amp;gt; tex&lt;/h3&gt;
+
+&lt;p&gt;Just double-left click.
+Note: configure setting:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;quot;C:\Program Files\WinEdt Team\WinEdt 10\WinEdt.exe&amp;quot; -C=&amp;quot;WinEdt 10.2&amp;quot; &amp;quot;[Open(|%f|);SelPar(%l,8);]&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://dwcao.github.io/img/SumatraPDF-setting2.png&#34; alt=&#34;configure setting in SumatraPDF&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://stackoverflow.com/questions/18731416/vim-open-fold-with-remote-silent&#34; target=&#34;_blank&#34;&gt;vim: open fold with remote-silent&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://tex.stackexchange.com/questions/354555/vim-latex-forward-and-reverse-search&#34; target=&#34;_blank&#34;&gt;Vim-latex: forward and reverse search&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.sumatrapdfreader.org/docs/Use-Sumatra-as-a-pre-viewer-for-LaTeX-editors-06174d1d7be24e10966656261c70ed7f.html&#34; target=&#34;_blank&#34;&gt;Use Sumatra as a pre-viewer for LaTeX editors&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://mg.readthedocs.io/latexmk.html&#34; target=&#34;_blank&#34;&gt;Using Latexmk&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://vim-latex.sourceforge.net/documentation/latex-suite/inverse-searching.html&#34; target=&#34;_blank&#34;&gt;Inverse Searching (documentation/latex-suite)&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</description>
+    </item>
+    
+    <item>
       <title>Convert PDF to PS by pdftops/pdf2ps</title>
       <link>http://dwcao.github.io/2017/05/22/convert-pdf-to-ps-by-pdftops/pdf2ps/</link>
       <pubDate>Mon, 22 May 2017 20:35:28 +0900</pubDate>
       
       <guid>http://dwcao.github.io/2017/05/22/convert-pdf-to-ps-by-pdftops/pdf2ps/</guid>
-      <description>&lt;p&gt;
-When use Vector graphics in &lt;em&gt;tex&lt;/em&gt; file, we  can use &lt;em&gt;eps&lt;/em&gt; or &lt;em&gt;ps&lt;/em&gt; files.
-How convert &lt;strong&gt;PDF&lt;/strong&gt; files to &lt;strong&gt;EPS/PS&lt;/strong&gt; files:&lt;/p&gt;
-
-&lt;p&gt;By using &lt;strong&gt;pdftops&lt;/strong&gt; or &lt;strong&gt;pdf2ps&lt;/strong&gt;,
+      <description>&lt;p&gt;Use &lt;strong&gt;pdftops&lt;/strong&gt; or &lt;strong&gt;pdf2ps&lt;/strong&gt;,
 we can convert &lt;em&gt;figure.pdf&lt;/em&gt; &amp;ndash;&amp;gt; &lt;em&gt;figure.eps&lt;/em&gt; or &lt;em&gt;figure.ps&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;pdftops&lt;/strong&gt; can run fast than &lt;strong&gt;pdf2ps&lt;/strong&gt;.
-And &lt;strong&gt;pdftops&lt;/strong&gt; get more smaller output (i.e., eps/ps) file than &lt;strong&gt;pdf2ps&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;p&gt;&lt;strong&gt;pdftops&lt;/strong&gt; can run fast than &lt;strong&gt;pdf2ps&lt;/strong&gt;.
+And &lt;strong&gt;pdftops&lt;/strong&gt; get more smaller output (i.e., eps/ps) file than &lt;strong&gt;pdf2ps&lt;/strong&gt;.
+But &lt;strong&gt;pdftops&lt;/strong&gt; get lossy quality figure, sometimes the output is not good enough.&lt;/p&gt;
+
+&lt;p&gt;Therefore, I recommend to use pdf-figure directly.&lt;/p&gt;
+
+&lt;/div&gt;
+
 
 &lt;p&gt;Use &lt;strong&gt;pdftops&lt;/strong&gt;,&lt;/p&gt;
 
@@ -39,12 +220,20 @@ pdf2ps figure.pdf figure.eps
 pdf2ps figure.pdf figure.ps
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;references&#34;&gt;References&lt;/h3&gt;
+&lt;h2 id=&#34;tips&#34;&gt;Tips:&lt;/h2&gt;
+
+&lt;p&gt;Convert PDF to eps (remove white space)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;ps2pdf14  -dEPSCrop image.eps image.pdf
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
 
 &lt;ol&gt;
 &lt;li&gt;&lt;a href=&#34;http://linuxcommand.org/man_pages/pdftops1.html&#34; target=&#34;_blank&#34;&gt;pdftops - Portable Document Format (PDF) to PostScript converter (ver- sion 3.01)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://docs.oracle.com/cd/E56344_01/html/E54075/pdf2ps-1.html&#34; target=&#34;_blank&#34;&gt;pdf2ps - Ghostscript PDF to PostScript translator&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://unix.stackexchange.com/questions/267317/conversion-of-pdf-to-ps&#34; target=&#34;_blank&#34;&gt;Conversion of PDF to PS (Unix &amp;amp; Linux Stack Exchange)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://loulloudes.info/blog/?p=28&#34; target=&#34;_blank&#34;&gt;Removing white space when converting from EPS to PDF&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;</description>
     </item>
     
@@ -125,9 +314,8 @@ pdf2ps figure.pdf figure.ps
       <pubDate>Tue, 28 Mar 2017 14:37:35 +0900</pubDate>
       
       <guid>http://dwcao.github.io/2017/03/28/matlab-command/</guid>
-      <description>
-
-&lt;p&gt;&lt;img src=&#34;http://cn.mathworks.com/etc/designs/mathworks/img/pic-header-mathworks-logo.svg&#34; alt=&#34;Matlab logo&#34; /&gt;&lt;/p&gt;
+      <description>&lt;p&gt;&lt;img src=&#34;http://cn.mathworks.com/etc/designs/mathworks/img/pic-header-mathworks-logo.svg&#34; alt=&#34;Matlab logo&#34; /&gt;
+&lt;/p&gt;
 
 &lt;h2 id=&#34;1-dlmwrite&#34;&gt;1. dlmwrite&lt;/h2&gt;
 
@@ -185,8 +373,7 @@ Example:&lt;/p&gt;
 
 &lt;ol&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.mathworks.com/help/matlab/&#34; target=&#34;_blank&#34;&gt;Matlab document home&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-</description>
+&lt;/ol&gt;</description>
     </item>
     
     <item>
@@ -308,7 +495,7 @@ nameserver 202.127.207.1   # Hefei CAS DNS Server
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$sudo /etc/init.d/networking restart
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;reference&#34;&gt;Reference&lt;/h3&gt;
+&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
 
 &lt;ol&gt;
 &lt;li&gt;&lt;a href=&#34;https://blog.ixxoo.me/ubuntu-static-ip-and-dns.html&#34; target=&#34;_blank&#34;&gt;Ubuntu配置静态IP和DNS&lt;/a&gt;&lt;/li&gt;
