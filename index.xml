@@ -11,13 +11,14 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>vim command</title>
+      <title>Vim command</title>
       <link>http://dwcao.github.io/2017/05/25/vim-command/</link>
       <pubDate>Thu, 25 May 2017 17:44:48 +0900</pubDate>
       
       <guid>http://dwcao.github.io/2017/05/25/vim-command/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;http://img3.wikia.nocookie.net/__cb4/vim/images/8/89/Wiki-wordmark.png&#34; alt=&#34;VIM&#34; /&gt;
-&lt;/p&gt;
+      <description>&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://img3.wikia.nocookie.net/__cb4/vim/images/8/89/Wiki-wordmark.png&#34; alt=&#34;VIM&#34; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;move-around-fast&#34;&gt;move around fast&lt;/h2&gt;
 
@@ -105,11 +106,11 @@
       <pubDate>Tue, 23 May 2017 17:02:01 +0900</pubDate>
       
       <guid>http://dwcao.github.io/2017/05/23/forward/inverse-searching-in-latex/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://www.latex-project.org/img/latex-project-logo.svg&#34; alt=&#34;latex-project&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;We can use  &lt;strong&gt;SyncTeX&lt;/strong&gt; to achieve Forward &amp;amp; Inverse searching
+      <description>&lt;p&gt;We can use  &lt;strong&gt;SyncTeX&lt;/strong&gt; to achieve Forward &amp;amp; Inverse searching
 between PDF and Tex files.
 &lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.latex-project.org/img/latex-project-logo.svg&#34; alt=&#34;latex-project&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Set&lt;/p&gt;
 
@@ -314,8 +315,9 @@ pdf2ps figure.pdf figure.ps
       <pubDate>Tue, 28 Mar 2017 14:37:35 +0900</pubDate>
       
       <guid>http://dwcao.github.io/2017/03/28/matlab-command/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;http://cn.mathworks.com/etc/designs/mathworks/img/pic-header-mathworks-logo.svg&#34; alt=&#34;Matlab logo&#34; /&gt;
-&lt;/p&gt;
+      <description>&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://cn.mathworks.com/etc/designs/mathworks/img/pic-header-mathworks-logo.svg&#34; alt=&#34;Matlab logo&#34; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;4-save-https-kr-mathworks-com-help-matlab-ref-save-html&#34;&gt;4. &lt;a href=&#34;https://kr.mathworks.com/help/matlab/ref/save.html&#34; target=&#34;_blank&#34;&gt;save&lt;/a&gt;&lt;/h2&gt;
 
