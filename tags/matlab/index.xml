@@ -19,7 +19,56 @@
       <description>&lt;p&gt;&lt;img src=&#34;http://cn.mathworks.com/etc/designs/mathworks/img/pic-header-mathworks-logo.svg&#34; alt=&#34;Matlab logo&#34; /&gt;
 &lt;/p&gt;
 
-&lt;h2 id=&#34;1-dlmwrite&#34;&gt;1. dlmwrite&lt;/h2&gt;
+&lt;h2 id=&#34;4-save-https-kr-mathworks-com-help-matlab-ref-save-html&#34;&gt;4. &lt;a href=&#34;https://kr.mathworks.com/help/matlab/ref/save.html&#34; target=&#34;_blank&#34;&gt;save&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Syntax&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;save(filename, variables, fmt);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;value of &lt;em&gt;fmt&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;file format&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&amp;rsquo;-mat&amp;rsquo; (default)&lt;/td&gt;
+&lt;td&gt;binary MAT-file format&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&amp;rsquo;-ascii&amp;rsquo;&lt;/td&gt;
+&lt;td&gt;text format with 8 digits&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&amp;rsquo;-ascii&amp;rsquo;,&amp;lsquo;tabs&amp;rsquo;&lt;/td&gt;
+&lt;td&gt;tab-delimited text with 8 digits&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&amp;rsquo;-ascii&amp;rsquo;, &amp;lsquo;-double&amp;rsquo;&lt;/td&gt;
+&lt;td&gt;text format with 16 digits&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&amp;rsquo;-ascii&amp;rsquo;,&amp;lsquo;-double&amp;rsquo;,&amp;lsquo;tabs&amp;rsquo;&lt;/td&gt;
+&lt;td&gt;tab-delimited format with 16 digits&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;strong&gt;Example&lt;/strong&gt;: save variate &lt;em&gt;var&lt;/em&gt; to txt-file &lt;em&gt;file.txt&lt;/em&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;save file.txt var -ascii;
+save(&#39;file.txt&#39;, &#39;var&#39;, &#39;-ascii&#39;);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;3-dlmwrite&#34;&gt;3. dlmwrite&lt;/h2&gt;
 
 &lt;p&gt;Write matrix to ASCII-delimited filea.
 Example:&lt;/p&gt;
@@ -35,7 +84,7 @@ Example:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;index_postion = find(var&amp;gt;10, 1, &#39;first&#39;);
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;3-atan2-angle&#34;&gt;3. atan2, angle&lt;/h2&gt;
+&lt;h2 id=&#34;1-atan2-angle&#34;&gt;1. atan2, angle&lt;/h2&gt;
 
 &lt;p&gt;For complex $z$, the magnitude $R$ and phase angle $\theta$ are given by
 \begin{align}

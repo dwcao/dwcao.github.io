@@ -190,7 +190,56 @@
       <p><img src="http://cn.mathworks.com/etc/designs/mathworks/img/pic-header-mathworks-logo.svg" alt="Matlab logo" />
 </p>
 
-<h2 id="1-dlmwrite">1. dlmwrite</h2>
+<h2 id="4-save-https-kr-mathworks-com-help-matlab-ref-save-html">4. <a href="https://kr.mathworks.com/help/matlab/ref/save.html" target="_blank">save</a></h2>
+
+<p><strong>Syntax</strong></p>
+
+<pre><code>save(filename, variables, fmt);
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th>value of <em>fmt</em></th>
+<th>file format</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>&rsquo;-mat&rsquo; (default)</td>
+<td>binary MAT-file format</td>
+</tr>
+
+<tr>
+<td>&rsquo;-ascii&rsquo;</td>
+<td>text format with 8 digits</td>
+</tr>
+
+<tr>
+<td>&rsquo;-ascii&rsquo;,&lsquo;tabs&rsquo;</td>
+<td>tab-delimited text with 8 digits</td>
+</tr>
+
+<tr>
+<td>&rsquo;-ascii&rsquo;, &lsquo;-double&rsquo;</td>
+<td>text format with 16 digits</td>
+</tr>
+
+<tr>
+<td>&rsquo;-ascii&rsquo;,&lsquo;-double&rsquo;,&lsquo;tabs&rsquo;</td>
+<td>tab-delimited format with 16 digits</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>Example</strong>: save variate <em>var</em> to txt-file <em>file.txt</em>.</p>
+
+<pre><code>save file.txt var -ascii;
+save('file.txt', 'var', '-ascii');
+</code></pre>
+
+<h2 id="3-dlmwrite">3. dlmwrite</h2>
 
 <p>Write matrix to ASCII-delimited filea.
 Example:</p>
@@ -206,7 +255,7 @@ Example:</p>
 <pre><code>index_postion = find(var&gt;10, 1, 'first');
 </code></pre>
 
-<h2 id="3-atan2-angle">3. atan2, angle</h2>
+<h2 id="1-atan2-angle">1. atan2, angle</h2>
 
 <p>For complex $z$, the magnitude $R$ and phase angle $\theta$ are given by
 \begin{align}
