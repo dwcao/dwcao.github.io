@@ -21,11 +21,29 @@
     </item>
     
     <item>
-      <title>Command</title>
-      <link>http://dwcao.github.io/tags/command/</link>
-      <pubDate>Tue, 28 Mar 2017 14:37:35 +0900</pubDate>
+      <title>Bash</title>
+      <link>http://dwcao.github.io/tags/bash/</link>
+      <pubDate>Tue, 28 Mar 2017 20:00:23 +0900</pubDate>
       
-      <guid>http://dwcao.github.io/tags/command/</guid>
+      <guid>http://dwcao.github.io/tags/bash/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cmd</title>
+      <link>http://dwcao.github.io/tags/cmd/</link>
+      <pubDate>Thu, 01 Jun 2017 13:29:35 +0900</pubDate>
+      
+      <guid>http://dwcao.github.io/tags/cmd/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cmder</title>
+      <link>http://dwcao.github.io/tags/cmder/</link>
+      <pubDate>Thu, 01 Jun 2017 13:29:35 +0900</pubDate>
+      
+      <guid>http://dwcao.github.io/tags/cmder/</guid>
       <description></description>
     </item>
     
@@ -39,20 +57,29 @@
     </item>
     
     <item>
+      <title>K480</title>
+      <link>http://dwcao.github.io/tags/k480/</link>
+      <pubDate>Mon, 01 Jun 2015 23:22:44 +0900</pubDate>
+      
+      <guid>http://dwcao.github.io/tags/k480/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Keyboard Switch</title>
       <link>http://dwcao.github.io/tags/keyboard-switch/</link>
-      <pubDate>Fri, 14 Oct 2016 15:51:40 +0800</pubDate>
+      <pubDate>Mon, 01 Jun 2015 23:22:44 +0900</pubDate>
       
       <guid>http://dwcao.github.io/tags/keyboard-switch/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Logitech K480</title>
-      <link>http://dwcao.github.io/tags/logitech-k480/</link>
-      <pubDate>Fri, 14 Oct 2016 15:51:40 +0800</pubDate>
+      <title>Latex</title>
+      <link>http://dwcao.github.io/tags/latex/</link>
+      <pubDate>Tue, 23 May 2017 17:02:01 +0900</pubDate>
       
-      <guid>http://dwcao.github.io/tags/logitech-k480/</guid>
+      <guid>http://dwcao.github.io/tags/latex/</guid>
       <description></description>
     </item>
     
@@ -66,11 +93,56 @@
     </item>
     
     <item>
+      <title>Move</title>
+      <link>http://dwcao.github.io/tags/move/</link>
+      <pubDate>Thu, 25 May 2017 17:44:48 +0900</pubDate>
+      
+      <guid>http://dwcao.github.io/tags/move/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Pdf2ps</title>
+      <link>http://dwcao.github.io/tags/pdf2ps/</link>
+      <pubDate>Mon, 22 May 2017 20:35:28 +0900</pubDate>
+      
+      <guid>http://dwcao.github.io/tags/pdf2ps/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Pdftops</title>
+      <link>http://dwcao.github.io/tags/pdftops/</link>
+      <pubDate>Mon, 22 May 2017 20:35:28 +0900</pubDate>
+      
+      <guid>http://dwcao.github.io/tags/pdftops/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ps1</title>
+      <link>http://dwcao.github.io/tags/ps1/</link>
+      <pubDate>Tue, 28 Mar 2017 20:00:23 +0900</pubDate>
+      
+      <guid>http://dwcao.github.io/tags/ps1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Static Ip</title>
       <link>http://dwcao.github.io/tags/static-ip/</link>
       <pubDate>Wed, 12 Oct 2016 20:15:50 +0800</pubDate>
       
       <guid>http://dwcao.github.io/tags/static-ip/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Synctex</title>
+      <link>http://dwcao.github.io/tags/synctex/</link>
+      <pubDate>Tue, 23 May 2017 17:02:01 +0900</pubDate>
+      
+      <guid>http://dwcao.github.io/tags/synctex/</guid>
       <description></description>
     </item>
     
