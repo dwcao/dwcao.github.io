@@ -206,8 +206,10 @@ blockquote p:last-child {
 
 .home-section {
 /*  background-color: rgb(255, 255, 255); */ 
-  background-color: rgb(250, 240, 230);   /* Linen dwcao*/
+/*  background-color: rgb(250, 240, 230);   /* Linen dwcao*/
 /*  background-color: rgb(175,238,238);  /* Pale Turquoise dwcao*/
+  background-color: rgb(222, 222, 222); /**/
+
   padding: 110px 0 110px 0;
   animation: intro 0.3s both;
   animation-delay: 0.15s;
