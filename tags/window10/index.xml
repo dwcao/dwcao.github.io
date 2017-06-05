@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Window10 on Green Grass</title>
+    <link>http://dwcao.github.io/tags/window10/</link>
+    <description>Recent content in Window10 on Green Grass</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>CopyRight&amp;copy; 2017 Dwcao</copyright>
+    <lastBuildDate>Wed, 29 Mar 2017 10:00:18 +0900</lastBuildDate>
+    <atom:link href="/tags/window10/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Bash on ubuntu on windows</title>
+      <link>http://dwcao.github.io/2017/03/29/bash-on-ubuntu-on-windows/</link>
+      <pubDate>Wed, 29 Mar 2017 10:00:18 +0900</pubDate>
+      
+      <guid>http://dwcao.github.io/2017/03/29/bash-on-ubuntu-on-windows/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;1-install&#34;&gt;1. install&lt;/h2&gt;
+
+&lt;p&gt;Reference &lt;a href=&#34;https://msdn.microsoft.com/zh-cn/commandline/wsl/install_guide&#34; target=&#34;_blank&#34;&gt;Installation Guide&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;2-uninstall&#34;&gt;2. uninstall&lt;/h2&gt;
+
+&lt;p&gt;In command prompt:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;lxrun /uninstall /full
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;maybe need to run this command several times, for complete removal it.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
