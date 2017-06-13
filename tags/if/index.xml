@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>If on Green Grass</title>
+    <link>http://dwcao.github.io/tags/if/</link>
+    <description>Recent content in If on Green Grass</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>CopyRight&amp;copy; 2017 Dwcao</copyright>
+    <lastBuildDate>Tue, 13 Jun 2017 18:46:35 +0900</lastBuildDate>
+    <atom:link href="/tags/if/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Gnuplot command</title>
+      <link>http://dwcao.github.io/2017/06/13/gnuplot-command/</link>
+      <pubDate>Tue, 13 Jun 2017 18:46:35 +0900</pubDate>
+      
+      <guid>http://dwcao.github.io/2017/06/13/gnuplot-command/</guid>
+      <description>&lt;p&gt;
+&lt;img src=&#34;http://dwcao.github.io/img/gnuplot_ico.png&#34; alt=&#34;gnuplot logo&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;3-string-http-www-bersch-net-gnuplot-doc-string-constants-and-string-variables-html-constants-and-string-variables&#34;&gt;3. &lt;a href=&#34;http://www.bersch.net/gnuplot-doc/string-constants-and-string-variables.html&#34; target=&#34;_blank&#34;&gt;String&lt;/a&gt; constants and string variables&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;N = 4
+plot &#39;data.&#39;.N title &amp;quot;Title for plot #&amp;quot;.N
+if (&amp;quot;A&amp;quot;.&amp;quot;B&amp;quot; eq &amp;quot;AB&amp;quot;) print &amp;quot;TRUE&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;2-for-http-www-bersch-net-gnuplot-doc-for-html&#34;&gt;2. &lt;a href=&#34;http://www.bersch.net/gnuplot-doc/for.html&#34; target=&#34;_blank&#34;&gt;for&lt;/a&gt;&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;for [intvar = strat: end : {:increment}]
+for [string in &amp;quot;A B C D&amp;quot;]
+do for [...] {
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Example:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;plot for [filename in &amp;quot;A.dat B.dat C.dat&amp;quot;] filename using 1:2 with lines
+plot for [basename in &amp;quot;A B C&amp;quot;] basename.&amp;quot;.dat&amp;quot; using 1:2 with lines
+set for [i = 1:10] style line i lc rgb &amp;quot;blue&amp;quot;
+unset for [tag = 100:200] label tag
+do for [t=0:50] {
+    outfile = sprintf(&#39;animation/bessel%03.0f.png&#39;,t)
+    set output outfile
+    splot u*sin(v),u*cos(v),bessel(u,t/50.0) w pm3d ls 1
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;1-if-http-www-bersch-net-gnuplot-doc-if-html&#34;&gt;1. &lt;a href=&#34;http://www.bersch.net/gnuplot-doc/if.html&#34; target=&#34;_blank&#34;&gt;if&lt;/a&gt;&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;if (condition) { &amp;lt;commands&amp;gt;;
+    &amp;lt;commands&amp;gt;
+    &amp;lt;commands&amp;gt;
+} else {
+    &amp;lt;commands&amp;gt;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Example&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;if (str eq &#39;long&#39;) {
+    set xrange [0:100];
+} else {
+    set xeange [0:1];
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.gnuplot.info/&#34; target=&#34;_blank&#34;&gt;gnuplot homepage&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.gnuplotting.org/&#34; target=&#34;_blank&#34;&gt;Create scientific plots using gnuplot&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.bersch.net/gnuplot-doc/gnuplot.html&#34; target=&#34;_blank&#34;&gt;An Interactive Plotting Program&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

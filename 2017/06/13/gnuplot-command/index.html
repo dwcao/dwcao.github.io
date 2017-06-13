@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme" content="hugo-academic">
+  <meta name="generator" content="Hugo 0.20.6" />
+  <meta name="author" content="Dewen Cao">
+  <meta name="description" content="PhD Candidate">
+
+  
+  
+  
+    
+  
+  
+    
+    
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/atom-one-dark.min.css">
+    
+  
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/academicons.min.css">
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700|Merriweather|Roboto+Mono">
+  <link rel="stylesheet" href="/css/hugo-academic.css">
+  
+
+  <link rel="alternate" href="http://dwcao.github.io/index.xml" type="application/rss+xml" title="Green Grass">
+  <link rel="feed" href="http://dwcao.github.io/index.xml" type="application/rss+xml" title="Green Grass">
+
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/apple-touch-icon.png">
+
+  <link rel="canonical" href="http://dwcao.github.io/2017/06/13/gnuplot-command/">
+
+  
+
+  <title>Gnuplot command | Green Grass</title>
+
+   <base target="_self">         
+
+    
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["TeX/cancel.js"], // this allows use of the "cancel" macro
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],   
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true         // this allows me to use a literal dollar sign, \$, outside of math mode
+    },
+    TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+
+<script type="text/javascript"
+   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML-full">
+</script>
+
+<script src="https://cdn.bootcss.com/highlight.js/9.10.0/languages/matlab.min.js"></script>
+
+
+</head>
+<body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71">
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Green Grass</a>
+    </div>
+
+    
+    <div class="collapse navbar-collapse">
+
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#about">
+            
+            <span>Home</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#publications">
+            
+            <span>Publications</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#posts">
+            
+            <span>Posts</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#contact">
+            
+            <span>Contact</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+  <div class="article-container">
+    <h1 itemprop="name">Gnuplot command</h1>
+    
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    <time datetime="2017-06-13 18:46:35 &#43;0900 KST" itemprop="datePublished">
+      Tue, Jun 13, 2017
+    </time>
+  </span>
+
+  
+
+  
+  
+  
+  <span class="article-tags">
+    <i class="fa fa-tags"></i>
+    
+    <a href="/tags/if">if</a
+    >, 
+    
+    <a href="/tags/for">for</a
+    >, 
+    
+    <a href="/tags/string">string</a
+    >
+    
+  </span>
+  
+  
+
+  
+  
+<script type="text/javascript" src="http://v3.jiathis.com/code_mini/jiathis_r.js?type=left&amp;move=0&amp;btn=l2.gif" charset="utf-8"></script>
+
+
+  
+
+</div>
+
+    <div class="article-style" itemprop="articleBody">
+      <p>
+<img src="/img/gnuplot_ico.png" alt="gnuplot logo" /></p>
+
+<h2 id="3-string-http-www-bersch-net-gnuplot-doc-string-constants-and-string-variables-html-constants-and-string-variables">3. <a href="http://www.bersch.net/gnuplot-doc/string-constants-and-string-variables.html" target="_blank">String</a> constants and string variables</h2>
+
+<pre><code>N = 4
+plot 'data.'.N title &quot;Title for plot #&quot;.N
+if (&quot;A&quot;.&quot;B&quot; eq &quot;AB&quot;) print &quot;TRUE&quot;
+</code></pre>
+
+<h2 id="2-for-http-www-bersch-net-gnuplot-doc-for-html">2. <a href="http://www.bersch.net/gnuplot-doc/for.html" target="_blank">for</a></h2>
+
+<pre><code>for [intvar = strat: end : {:increment}]
+for [string in &quot;A B C D&quot;]
+do for [...] {
+}
+</code></pre>
+
+<p>Example:</p>
+
+<pre><code>plot for [filename in &quot;A.dat B.dat C.dat&quot;] filename using 1:2 with lines
+plot for [basename in &quot;A B C&quot;] basename.&quot;.dat&quot; using 1:2 with lines
+set for [i = 1:10] style line i lc rgb &quot;blue&quot;
+unset for [tag = 100:200] label tag
+do for [t=0:50] {
+    outfile = sprintf('animation/bessel%03.0f.png',t)
+    set output outfile
+    splot u*sin(v),u*cos(v),bessel(u,t/50.0) w pm3d ls 1
+}
+</code></pre>
+
+<h2 id="1-if-http-www-bersch-net-gnuplot-doc-if-html">1. <a href="http://www.bersch.net/gnuplot-doc/if.html" target="_blank">if</a></h2>
+
+<pre><code>if (condition) { &lt;commands&gt;;
+    &lt;commands&gt;
+    &lt;commands&gt;
+} else {
+    &lt;commands&gt;
+}
+</code></pre>
+
+<p>Example</p>
+
+<pre><code>if (str eq 'long') {
+    set xrange [0:100];
+} else {
+    set xeange [0:1];
+}
+</code></pre>
+
+<h2 id="reference">Reference</h2>
+
+<ol>
+<li><a href="http://www.gnuplot.info/" target="_blank">gnuplot homepage</a></li>
+<li><a href="http://www.gnuplotting.org/" target="_blank">Create scientific plots using gnuplot</a></li>
+<li><a href="http://www.bersch.net/gnuplot-doc/gnuplot.html" target="_blank">An Interactive Plotting Program</a></li>
+</ol>
+    </div>
+  </div>
+
+</article>
+
+<div class="container">
+  <nav>
+  <ul class="pager">
+    
+    <li class="previous"><a href="http://dwcao.github.io/2017/06/01/cmder-lovely-console-emulator-for-windows/"><span
+      aria-hidden="true">&larr;</span> Cmder: lovely console emulator for Windows</a></li>
+    
+
+    
+  </ul>
+</nav>
+
+</div>
+
+<div class="article-container">
+  
+
+</div>
+
+<footer class="site-footer">
+    <div class="container">
+        <p class="powered-by">
+
+            CopyRight&copy; 2017 Dwcao &middot; 
+
+            Powered by <a href="https://github.com/gcushen/hugo-academic" target="_blank">Academic theme</a> for <a href="http://gohugo.io" target="_blank">Hugo</a>. Built on Jun. 13th, 2017
+
+            <span class="pull-right" aria-hidden="true">
+                <a href="#" id="back_to_top">
+                    <span class="button_icon">
+                        <i class="fa fa-chevron-up fa-2x" aria-hidden="true"></i>
+                    </span>
+                </a>
+            </span>
+
+        </p>
+    </div>
+</footer>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
+    <script src="/js/jquery-1.12.3.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/isotope.pkgd.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.1/imagesloaded.pkgd.min.js"></script>
+    <script src="/js/hugo-academic.js"></script>
+    
+
+    
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-81403661-1', 'auto');
+        ga('send', 'pageview');
+
+         
+        var links = document.querySelectorAll('a');
+        Array.prototype.map.call(links, function(item) {
+            if (item.host != document.location.host) {
+                item.addEventListener('click', function() {
+                    var action = item.getAttribute('data-action') || 'follow';
+                    ga('send', 'event', 'outbound', action, item.href);
+                });
+            }
+        });
+    </script>
+    
+
+    
+    
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+
+      
+
+      
+
+      <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+    </script>
+    <script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML"></script>
+    
+
+  </body>
+</html>
+

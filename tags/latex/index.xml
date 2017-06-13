@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Latex on Green Grass</title>
+    <link>http://dwcao.github.io/tags/latex/</link>
+    <description>Recent content in Latex on Green Grass</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>CopyRight&amp;copy; 2017 Dwcao</copyright>
+    <lastBuildDate>Tue, 23 May 2017 17:02:01 +0900</lastBuildDate>
+    <atom:link href="/tags/latex/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Forward/Inverse searching in Latex</title>
+      <link>http://dwcao.github.io/2017/05/23/forward/inverse-searching-in-latex/</link>
+      <pubDate>Tue, 23 May 2017 17:02:01 +0900</pubDate>
+      
+      <guid>http://dwcao.github.io/2017/05/23/forward/inverse-searching-in-latex/</guid>
+      <description>&lt;p&gt;We can use  &lt;strong&gt;SyncTeX&lt;/strong&gt; to achieve Forward &amp;amp; Inverse searching
+between PDF and Tex files.
+&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.latex-project.org/img/latex-project-logo.svg&#34; alt=&#34;latex-project&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Set&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;pdflatex = &amp;quot;pdflatex --synctex=-1 %O %S&amp;quot;;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Or compile tex file by using&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;pdflatex --syntex=-1 file.tex
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;div class=&#34;alert alert-warning&#34;&gt;
+  &lt;p&gt;&lt;strong&gt;--syntex=-1&lt;/strong&gt; works well for both &lt;a href=&#34;https://github.com/vim/vim&#34; target=&#34;_blank&#34;&gt;Gvim&lt;/a&gt; and &lt;a href=&#34;https://github.com/sumatrapdfreader/sumatrapdf&#34; target=&#34;_blank&#34;&gt;WinEdt&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;-syntec=1&lt;/strong&gt; just works for WindEdt.&lt;/p&gt;
+
+&lt;/div&gt;
+
+
+&lt;h2 id=&#34;1-swift-between-gvim-and-sumatrapdf&#34;&gt;1. swift between Gvim and SumatraPDF&lt;/h2&gt;
+
+&lt;p&gt;Here use vim/gvim to edit tex files and SumatraPDF for PDF files&lt;/p&gt;
+
+&lt;h3 id=&#34;forward-research-tex-pdf&#34;&gt;Forward research: tex -&amp;gt; pdf&lt;/h3&gt;
+
+&lt;p&gt;In vim&amp;rsquo;s command mode, type &lt;span style=&#34;color:red&#34;&gt; &lt;strong&gt;&lt;a href=&#34;http://vim-latex.sourceforge.net/documentation/latex-suite-quickstart.html#lsq-quick-inverse-searching&#34; target=&#34;_blank&#34;&gt;\ls&lt;/a&gt;&lt;/strong&gt; &lt;/span&gt;.
+Note: Need vim plugin &lt;strong&gt;&lt;a href=&#34;https://github.com/vim-latex/vim-latex&#34; target=&#34;_blank&#34;&gt;latex-suite&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;inverse-research-pdf-tex&#34;&gt;Inverse research: pdf -&amp;gt; tex&lt;/h3&gt;
+
+&lt;p&gt;Just double-left click.
+Note: configure setting:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;quot;C:\Program Files (x86)\Vim\vim80\gvim.exe&amp;quot; --remote-silent +&amp;quot;%l|exe &#39;normal! zv&#39;&amp;quot; %f
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Or&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;quot;C:\Program Files (x86)\Vim\vim80\gvim.exe&amp;quot; --servername GVIM --remote-silent +%l %f
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If you have add gvim path into &lt;strong&gt;&lt;a href=&#34;https://superuser.com/questions/949560/how-do-i-set-system-environment-variables-in-windows-10&#34; target=&#34;_blank&#34;&gt;$PATH&lt;/a&gt;&lt;/strong&gt;, just set it as&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;gvim --remote-silent +&amp;quot;%l|exe &#39;normal! zv&#39;&amp;quot; %f
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://dwcao.github.io/img/SumatraPDF-setting.png&#34; alt=&#34;configure setting in SumatraPDF&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;2-swift-between-winedt-http-www-winedt-com-and-sumatrapdf&#34;&gt;2. swift between &lt;a href=&#34;http://www.winedt.com/&#34; target=&#34;_blank&#34;&gt;WinEdt&lt;/a&gt; and SumatraPDF&lt;/h2&gt;
+
+&lt;h3 id=&#34;forward-research-tex-pdf-1&#34;&gt;Forward research: tex -&amp;gt; pdf&lt;/h3&gt;
+
+&lt;p&gt;Use shortcut key: &lt;strong&gt;Shift + F8&lt;/strong&gt;, or click &lt;i class=&#34;fa fa-search-plus fa-1x&#34;&gt;&lt;/i&gt; &lt;img src=&#34;http://dwcao.github.io/img/WinEdt-Inverse.png&#34; alt=&#34;shortcut key&#34; /&gt;
+&lt;img src=&#34;http://dwcao.github.io/img/WinEdt-synctex.png&#34; alt=&#34;SyncTeX setting&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;inverse-research-pdf-tex-1&#34;&gt;Inverse research: pdf -&amp;gt; tex&lt;/h3&gt;
+
+&lt;p&gt;Just double-left click.
+Note: configure setting:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;quot;C:\Program Files\WinEdt Team\WinEdt 10\WinEdt.exe&amp;quot; -C=&amp;quot;WinEdt 10.2&amp;quot; &amp;quot;[Open(|%f|);SelPar(%l,8);]&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://dwcao.github.io/img/SumatraPDF-setting2.png&#34; alt=&#34;configure setting in SumatraPDF&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://stackoverflow.com/questions/18731416/vim-open-fold-with-remote-silent&#34; target=&#34;_blank&#34;&gt;vim: open fold with remote-silent&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://tex.stackexchange.com/questions/354555/vim-latex-forward-and-reverse-search&#34; target=&#34;_blank&#34;&gt;Vim-latex: forward and reverse search&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.sumatrapdfreader.org/docs/Use-Sumatra-as-a-pre-viewer-for-LaTeX-editors-06174d1d7be24e10966656261c70ed7f.html&#34; target=&#34;_blank&#34;&gt;Use Sumatra as a pre-viewer for LaTeX editors&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://mg.readthedocs.io/latexmk.html&#34; target=&#34;_blank&#34;&gt;Using Latexmk&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://vim-latex.sourceforge.net/documentation/latex-suite/inverse-searching.html&#34; target=&#34;_blank&#34;&gt;Inverse Searching (documentation/latex-suite)&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
